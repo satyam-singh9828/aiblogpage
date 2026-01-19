@@ -10,6 +10,11 @@ dotenv.config(); // ✅ Load .env file
 
 
 const app = express() ;
+app.use(cors({
+     origin: [
+     "https://aiblogpage.netlify.app/" ],
+ app
+}) ) ;
 
 app.use(express.json()) ;
 app.use("/uploads", express.static("uploads")); 
