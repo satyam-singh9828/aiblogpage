@@ -4,7 +4,7 @@ import blogrouter from "./router/blogrouter.js" ;
 import cors from "cors" ;
 import mongoose from  "mongoose" ;
 import path from "path";
-import cors from "cors";
+
 
 
 import dotenv from "dotenv";
