@@ -85,6 +85,10 @@ export const newConversation = async(req , res , next ) => {
         error: "Prompt is required",
       });
     }
+    console.log("HIT /blogs/generate");
+  console.log("BODY:", req.body);
+  res.json({ content: "test success" });
+
     const content = await genrativeContent(prompt);
     res.json({content});
 
