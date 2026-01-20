@@ -87,9 +87,10 @@ export const newConversation = async(req , res , next ) => {
     }
     console.log("HIT /blogs/generate");
   console.log("BODY:", req.body);
-  res.json({ content: "test success" });
+  
 
     const content = await genrativeContent(prompt);
+    res.json({ content: "test success" });
     res.json({content});
 
 
