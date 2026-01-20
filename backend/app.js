@@ -4,6 +4,8 @@ import blogrouter from "./router/blogrouter.js" ;
 import cors from "cors" ;
 import mongoose from  "mongoose" ;
 import path from "path";
+import cors from "cors";
+
 
 import dotenv from "dotenv";
 dotenv.config(); // ✅ Load .env file
@@ -11,10 +13,12 @@ dotenv.config(); // ✅ Load .env file
 
 const app = express() ;
 app.use(cors({
-     origin: [
-     "https://aiblogpage.netlify.app" ],
- app
-}) ) ;
+  origin: [
+    "http://localhost:5173",          // ✅ local frontend
+    "https://aiblogpage.netlify.app"   // ✅ production frontend
+  ],
+  credentials: true
+}));
 
 app.use(express.json()) ;
 app.use("/uploads", express.static("uploads")); 
