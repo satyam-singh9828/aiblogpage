@@ -89,7 +89,7 @@ export const newConversation = async(req , res , next ) => {
   
 
     const content = await genrativeContent(prompt);
-    res.json({ content: "test success" });
+    
     res.json({content});
 
 
