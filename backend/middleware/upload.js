@@ -6,7 +6,7 @@ import cloudinary from "../config/cloudinary.js";
 import path from "path";
 
 const storage = new CloudinaryStorage({
-  cloudinary,
+  cloudinary: cloudinary , 
   params: {
     folder: "blogs",          
     allowed_formats: ["jpg", "png", "jpeg"],
