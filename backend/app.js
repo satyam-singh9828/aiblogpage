@@ -5,20 +5,11 @@ import cors from "cors" ;
 import mongoose from  "mongoose" ;
 import path from "path";
 
-
-
 import dotenv from "dotenv";
 dotenv.config(); // ✅ Load .env file
 
 
 const app = express() ;
-app.use(cors({
-  origin: [
-    "http://localhost:5173",          // ✅ local frontend
-    "https://aiblogpage.netlify.app"   // ✅ production frontend
-  ],
-  credentials: true
-}));
 
 app.use(express.json()) ;
 app.use("/uploads", express.static("uploads")); 

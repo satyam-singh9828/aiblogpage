@@ -8,7 +8,7 @@ blogrouter.post( "/blogs" , authenticate  , upload.single("image")  , postBlog )
 blogrouter.delete("/blogs/:id"  ,  deleteBlog ) ;
 blogrouter.put( "/blogs/like/:id"  , likedBlog ) ;
 blogrouter.post( "/blogs/comment/:id" , commentonBlog ) ;
-blogrouter.post("/login"  , postproduct) ; 
+blogrouter.post("/login" , postproduct) ; 
 blogrouter.post("/blogs/generate"  ,newConversation ) ;
 blogrouter.get("/blogs/:id" , blogdetail ) ;
 blogrouter.put( "/blogs/dislike/:id"  , DislikedBlog ) ;

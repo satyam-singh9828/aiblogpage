@@ -17,10 +17,8 @@ export const postBlog = async ( req , res , next ) => {
   console.log("REQ BODY = ", req.body);
     console.log("FILE:", req.file);  
       const {title, content , author} = req.body ;
-      if(!content){
-         content : {"please write something"} ;
-      }
-        const image = req.file ? `/uploads/${req.file.filename}` : null;
+    
+        const image = req.file ?.path ;
         const user = req.user.id 
 
     try {
@@ -85,11 +83,7 @@ export const newConversation = async(req , res , next ) => {
         error: "Prompt is required",
       });
     }
-
-  
-
     const content = await genrativeContent(prompt);
-    
     res.json({content});
 
 
